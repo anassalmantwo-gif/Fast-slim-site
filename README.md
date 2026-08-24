@@ -44,13 +44,26 @@ scripts/process-assets.mjs # media pipeline (video → poster/stills → webp/jp
   placeholder bubble for an `<img>` in the reviews section of `index.html`.
 - **Contact links** — WhatsApp / Instagram / Facebook are in the contact section.
 
-## Regenerating media
+## Media & Higgsfield asset slots
 
-The optimized media is committed, so you only need this when the source video changes:
+The optimized media is committed, so you only regenerate it when a source asset
+changes. Every visual maps to a **swap slot** — drop a raw file (e.g. a Higgsfield
+export) into `assets-src/` and re-run the pipeline:
 
 ```bash
-SOURCE=/path/to/original-product-video.mp4 npm run assets
+# swap any subset — missing slots fall back to the product video
+assets-src/hero.mp4        # hero cinematic loop  → fastslim.mp4/.webm + poster
+assets-src/product.png     # clean product shot   → pack-* + og
+assets-src/capsules.png    # capsule/detail shot  → closeup-*
+assets-src/lifestyle.png   # premium lifestyle    → lifestyle-* (optional)
+
+npm run assets             # regenerate optimized files in src/assets/media
+npm run build
 ```
+
+See **`src/assets/media/README.md`** for the full slot table, recommended
+Higgsfield prompts, and how to wire the optional lifestyle band. The pipeline still
+accepts a one-off video via `SOURCE=/path/to/video.mp4 npm run assets`.
 
 Requires the dev dependencies `ffmpeg-static`, `ffprobe-static`, and `sharp`.
 

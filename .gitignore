@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .asset-tmp/
+assets-src/
 scratch_src/
 scratch_frames/
 *.log
