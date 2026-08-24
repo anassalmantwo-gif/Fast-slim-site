@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.asset-tmp/
+scratch_src/
+scratch_frames/
+*.log
+.DS_Store
+.vite/
