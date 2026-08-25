@@ -7,3 +7,5 @@ scratch_frames/
 *.log
 .DS_Store
 .vite/
+scratch_hero/
+_*.mjs
