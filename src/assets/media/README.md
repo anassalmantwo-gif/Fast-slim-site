@@ -8,7 +8,8 @@ it falls back to a frame from the product video, so the site always has valid me
 
 | Slot file (drop in `assets-src/`) | Generates | Used in | Recommended Higgsfield asset |
 |---|---|---|---|
-| `hero.mp4` | `fastslim.mp4`, `fastslim.webm`, `poster.jpg` | Hero + video lightbox | **Product cinematic loop** — slow push-in on the Fast Slim+ bottle, soft studio light, subtle water droplets. Vertical 720×1280, 4–6 s, seamless loop, no text. |
+| `bottle-cutout.webp` / `.png` | *(committed directly)* | **Hero** — the free-floating 3D-style bottle | **Transparent product cut-out** of the bottle (no background). Currently derived from the product video via local background removal. Replace with a clean cut-out of the **bottle-on-white** photo for best sharpness — just drop a transparent PNG here (and re-export a `.webp`). |
+| `hero.mp4` | `fastslim.mp4`, `fastslim.webm`, `poster.jpg` | Video lightbox (شاهدي الفيديو / About Us) | **Product cinematic loop** — slow push-in on the Fast Slim+ bottle, soft studio light, subtle water droplets. Vertical 720×1280, 4–6 s, seamless loop, no text. |
 | `product.png` | `pack-480/720.webp/.jpg` + `og.jpg` | "العبوة الأصلية" block | **Clean product shot** — the sealed bottle on a soft gradient, front label crisp and centered. ≥ 1080×1920, PNG. |
 | `capsules.png` | `closeup-480/720.webp/.jpg` | "طريقة الاستخدام" block | **Close-up detail** — capsules / cap / label macro, shallow depth of field. ≥ 1080×1920, PNG. |
 | `lifestyle.png` | `lifestyle-480/720/1080.webp/.jpg` | *(optional, ready to wire — see below)* | **Premium lifestyle scene** — the packaging in an elegant real setting (marble, morning light, glass of water). ≥ 1620×1080, PNG. |

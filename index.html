@@ -88,15 +88,12 @@
           <span class="cap cap-2" aria-hidden="true"></span>
 
           <div class="bottle" data-parallax="0.11">
-            <video
-              class="bottle-media"
-              autoplay muted loop playsinline
-              poster="./src/assets/media/poster.jpg"
-              preload="metadata"
-              aria-label="عبوة Fast Slim+ بتأثير ثلاثي الأبعاد">
-              <source src="./src/assets/media/fastslim.webm" type="video/webm" />
-              <source src="./src/assets/media/fastslim.mp4" type="video/mp4" />
-            </video>
+            <picture>
+              <source type="image/webp" srcset="./src/assets/media/bottle-cutout.webp" />
+              <img class="bottle-media" src="./src/assets/media/bottle-cutout.png"
+                   width="316" height="702" decoding="async" fetchpriority="high"
+                   alt="عبوة Fast Slim+ من Five Stars — مكمل غذائي بـ 30 كبسولة" />
+            </picture>
           </div>
 
           <!-- Floating cards around the product -->
