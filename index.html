@@ -40,6 +40,12 @@
           <span class="brand-sub" dir="ltr">Five Stars</span>
         </span>
       </a>
+      <nav class="site-nav" aria-label="التنقل الرئيسي">
+        <a href="#formula">التركيبة</a>
+        <a href="#usage">طريقة الاستخدام</a>
+        <a href="#reviews">التقييمات</a>
+        <a href="#order">الطلب</a>
+      </nav>
       <a class="header-cta" href="#" data-wa aria-label="اطلبي الآن عبر واتساب">
         <svg class="wa-ico" viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7.9.9-3.6-.2-.4a10 10 0 0 1-1.6-5.5C5.9 9.8 10.4 5.4 16 5.4s10.1 4.4 10.1 10.1S21.6 25.7 16 25.7zm5.6-7.5c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.8.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
         <span>اطلبي الآن</span>
@@ -50,13 +56,19 @@
   <main>
     <!-- ================= HERO ================= -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-hills"></div>
+        <div class="hero-orb orb-a"></div>
+        <div class="hero-orb orb-b"></div>
+      </div>
+
+      <div class="hero-word" aria-hidden="true" data-parallax="0.05"><span dir="ltr">Fast&nbsp;Slim<sup>+</sup></span></div>
+
+      <div class="container hero-wrap">
+        <div class="hero-head reveal">
           <p class="eyebrow"><span dir="ltr">Five Stars</span> · مكمل غذائي طبيعي</p>
           <h1 id="hero-title" class="hero-title"><span dir="ltr">Fast Slim<sup>+</sup></span></h1>
           <p class="hero-lede">تركيبة طبيعية لدعم التحكم في الشهية ونمط حياة أكثر رشاقة</p>
-
           <div class="hero-actions">
             <a class="btn btn-primary" href="#" data-wa>
               <svg class="wa-ico" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7.9.9-3.6-.2-.4a10 10 0 0 1-1.6-5.5C5.9 9.8 10.4 5.4 16 5.4s10.1 4.4 10.1 10.1S21.6 25.7 16 25.7zm5.6-7.5c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.8.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
@@ -64,31 +76,59 @@
             </a>
             <button class="btn btn-ghost" type="button" data-video-open>
               <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
-              شاهدي طريقة الاستخدام
+              شاهدي الفيديو
             </button>
           </div>
-
-          <ul class="badges" aria-label="مميزات المنتج">
-            <li class="badge"><span class="badge-dot"></span>30 كبسولة</li>
-            <li class="badge" dir="ltr"><span class="badge-dot"></span>Five Stars formula</li>
-            <li class="badge" dir="ltr"><span class="badge-dot"></span>100% Natural</li>
-          </ul>
+          <p class="hero-compliance">النتائج تختلف من شخص لآخر · مكمل غذائي وليس علاجاً طبياً</p>
         </div>
 
-        <div class="hero-media reveal">
-          <div class="media-frame">
+        <div class="hero-stage reveal">
+          <div class="stage-glow" aria-hidden="true"></div>
+          <span class="cap cap-1" aria-hidden="true"></span>
+          <span class="cap cap-2" aria-hidden="true"></span>
+
+          <div class="bottle" data-parallax="0.11">
             <video
-              class="hero-video"
+              class="bottle-media"
               autoplay muted loop playsinline
               poster="./src/assets/media/poster.jpg"
               preload="metadata"
-              aria-label="عرض مرئي لعبوة Fast Slim+">
+              aria-label="عبوة Fast Slim+ بتأثير ثلاثي الأبعاد">
               <source src="./src/assets/media/fastslim.webm" type="video/webm" />
               <source src="./src/assets/media/fastslim.mp4" type="video/mp4" />
             </video>
-            <span class="media-tag" dir="ltr">30 Capsules</span>
           </div>
+
+          <!-- Floating cards around the product -->
+          <button class="fcard fcard-about" type="button" data-video-open data-parallax="0.16" aria-label="شاهدي الفيديو — من نحن">
+            <span class="about-thumb" aria-hidden="true">
+              <span class="play-dot"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+            </span>
+            <span class="about-label" dir="ltr">About Us</span>
+          </button>
+
+          <a class="fcard fcard-formula" href="#formula" data-parallax="0.13">
+            <span class="fcard-k" dir="ltr">New Formula</span>
+            <span class="fcard-t">تركيبة <span dir="ltr">Five Stars</span></span>
+            <span class="fcard-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <div class="fcard fcard-editor" data-parallax="0.18">
+            <span class="crown" aria-hidden="true">★</span>
+            <span class="editor-rank" dir="ltr">#1</span>
+            <span class="editor-sub">دعم الوزن</span>
+            <span class="editor-year" dir="ltr">2026</span>
+          </div>
+
+          <div class="chip chip-30" data-parallax="0.09"><b>30</b> كبسولة</div>
+          <div class="chip chip-natural" dir="ltr" data-parallax="0.07"><span class="chip-dot"></span>100% Natural</div>
         </div>
+
+        <ul class="badges" aria-label="مميزات المنتج">
+          <li class="badge"><span class="badge-dot"></span>30 كبسولة</li>
+          <li class="badge" dir="ltr"><span class="badge-dot"></span>Five Stars formula</li>
+          <li class="badge" dir="ltr"><span class="badge-dot"></span>100% Natural</li>
+        </ul>
       </div>
     </section>
 
@@ -119,7 +159,7 @@
     </section>
 
     <!-- ================= FORMULA ================= -->
-    <section class="section formula" aria-labelledby="formula-title">
+    <section class="section formula" id="formula" aria-labelledby="formula-title">
       <div class="container">
         <header class="section-head reveal">
           <p class="kicker">التركيبة</p>
@@ -174,7 +214,7 @@
     </section>
 
     <!-- ================= HOW TO USE ================= -->
-    <section class="section usage" aria-labelledby="usage-title">
+    <section class="section usage" id="usage" aria-labelledby="usage-title">
       <div class="container usage-grid">
         <div class="usage-copy reveal">
           <p class="kicker">الاستخدام</p>
@@ -199,7 +239,7 @@
     </section>
 
     <!-- ================= REVIEWS ================= -->
-    <section class="section reviews" aria-labelledby="reviews-title">
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
       <div class="container">
         <header class="section-head reveal">
           <p class="kicker">التقييمات</p>

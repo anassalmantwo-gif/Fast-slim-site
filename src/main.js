@@ -65,6 +65,40 @@ document.querySelectorAll('[data-video-close]').forEach((b) => b.addEventListene
 lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox && !lightbox.hidden) closeLightbox(); });
 
+// --- Hero parallax (mouse depth + subtle scroll drift), motion-safe ---
+const parallaxEls = [...document.querySelectorAll('[data-parallax]')].map((el) => ({
+  el,
+  f: parseFloat(el.dataset.parallax) || 0,
+  word: el.classList.contains('hero-word'),
+}));
+if (!reduceMotion && parallaxEls.length) {
+  const hero = document.querySelector('.hero');
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
+  let mx = 0, my = 0, sy = 0, ticking = false;
+
+  const apply = () => {
+    ticking = false;
+    for (const { el, f, word } of parallaxEls) {
+      const px = mx * f * 42;
+      const py = my * f * 30 + (word ? sy * f * 2.2 : 0);
+      el.style.transform = `translate3d(${px.toFixed(1)}px, ${py.toFixed(1)}px, 0)`;
+    }
+  };
+  const schedule = () => { if (!ticking) { ticking = true; requestAnimationFrame(apply); } };
+
+  if (finePointer && hero) {
+    hero.addEventListener('pointermove', (e) => {
+      const r = hero.getBoundingClientRect();
+      mx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      my = ((e.clientY - r.top) / r.height - 0.5) * 2;
+      schedule();
+    });
+    hero.addEventListener('pointerleave', () => { mx = 0; my = 0; schedule(); });
+  }
+  // Subtle downward drift of the big background wordmark on scroll.
+  window.addEventListener('scroll', () => { sy = Math.min(window.scrollY, 500); schedule(); }, { passive: true });
+}
+
 // --- Hide sticky CTA when the order/contact CTA is on screen (avoids double CTAs) ---
 const sticky = document.querySelector('.sticky-cta');
 const orderSection = document.getElementById('order');
